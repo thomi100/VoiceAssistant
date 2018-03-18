@@ -20,3 +20,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.idea/artifacts/VoiceAssistantDesktop.xml
+.idea/misc.xml
+.idea/workspace.xml
+.idea/modules.xml
+out/production/VoiceAssistantDesktop/META-INF/MANIFEST.MF
+out/production/VoiceAssistantDesktop/mistakes_2018-01-28--09-10-56.txt
+out/production/VoiceAssistantDesktop/net/thomi100/VAAPI/Documentation.txt
+out/production/VoiceAssistantDesktop/personalData.txt
+VoiceAssistantDesktop.iml

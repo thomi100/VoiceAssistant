@@ -1,0 +1,34 @@
+1. - Einrichtung des VoiceAssistantAPI [VAAPI]
+
+    1.1 - Installation
+        Das Package net.thomi100.VAAPI (meist in den /src/-Ordner) kopieren
+        Eine .jar-API wird folgen.
+
+    1.2 - Implementation
+        Die Voicemap (alle Inputs und Outputs) aus dem Internet laden mit 'VoiceAssistantAPI.getVoicemap()'
+        Die Unknownmap (alle Nachrichten, wenn keine Antwort gefunden werden kann) laden mit 'VoiceAssistantAPI.getUnknownmap()'
+        Konfigurationsdateien herunterladen mit 'VoiceAssistantAPI.getConfigAll()'
+        statischen Transformer definieren mit 'transformer = VoiceAssistantAPI.getTransformer(voicemap, unknownmap)'
+
+    1.3 - Integration
+        Transformer anwenden, um nächsten Match zu finden mit 'transformer.process(input)'
+        Output nehmen mit 'transformer.transform()'
+        > Output anwenden
+        Transformer resetten und bereitstellen für weitere Aktion mit 'transformer.close()'
+
+2. - Aktualisierung des VAAPI
+
+    1.1 - Installation
+        wenn nicht bereits beim Programmieren getan, Versionsnummer in VoiceAssistantAPI.class anpassen
+        Alle Dateien des Packages net.thomi100.VAAPI kopieren, ausser EasyActions.class
+
+    1.2 - Integration
+        Die Aktualisierungen der Inputs und Outputs erfolgen automatisch.
+        Daher ist keine allgemein Integration notwendig, ausser, es sind neue Funktionen dazugekommen.
+
+3. - Aktionen festlegen
+
+    1.1 - Hard-Coded
+        In der Klasse EasyActions.class in auf jeder neuen Platform muss eine Aktion programmiert werden.
+        Dazu wird in der Methode 'runAction(String code, Transformer transformer)' jeweils ein if-Block erstellt.
+        Eine Liste aller Aktionen ist auf http://www.thomi100.net/dev/VoiceAssistantFiles.txt
